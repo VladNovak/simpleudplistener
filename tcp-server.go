@@ -12,7 +12,7 @@ func main() {
 
   if (len(args) > 1) && (args[1] == "udp") {
      fmt.Println("Launching server in udp mode...")
-     ln, _ := net.ResolveUDPAddr("udp",":1234")
+     ln, _ := net.ResolveUDPAddr("udp",":8010")
     
      /* Now listen at selected port */
      conn, _ := net.ListenUDP("udp", ln)
@@ -34,7 +34,7 @@ func main() {
 
   } else  {
       fmt.Println("Launching server...")
-     ln, _ := net.Listen("tcp", ":1234")
+     ln, _ := net.Listen("tcp", ":8010")
 
      // accept connection on port
      conn, _ := ln.Accept()
