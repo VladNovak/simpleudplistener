@@ -6,4 +6,4 @@ WORKDIR $SERVER
 
 ADD . $SERVER
 
-CMD ./simpletcplistener
+CMD ["go", "run", "./tcp-server.go"]
