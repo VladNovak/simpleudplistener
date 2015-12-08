@@ -10,4 +10,4 @@ ADD . $SERVER
 
 RUN go build
 
-CMD ./simpletcplistener
+CMD ./server
