@@ -26,7 +26,7 @@ func main() {
         newmessage := strings.ToUpper(message[:len(message)-1])
         if newmessage == "STATUS" {
           conn.WriteTo([]byte("OK\n"),addr)
-        } else if newmessage = "TERMINATE" {
+        } else if newmessage == "TERMINATE" {
           break
         } else {
           // send new string back to client
@@ -47,7 +47,7 @@ func main() {
        newmessage := strings.ToUpper(message[:len(message)-1])
        if newmessage == "STATUS" {
           conn.Write([]byte("OK\n"))
-       } else if newmessage = "TERMINATE" {
+       } else if newmessage == "TERMINATE" {
           break
        } else {
           // send new string back to client
