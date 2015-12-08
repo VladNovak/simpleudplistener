@@ -4,6 +4,10 @@ ENV SERVER /server
 RUN mkdir $SERVER
 WORKDIR $SERVER
 
+RUN apt-get update -qq && apt-get install -y golang
+
 ADD . $SERVER
 
-CMD ["go", "run", "./tcp-server.go"]
+RUN go build
+
+CMD ./simpletcplistener
