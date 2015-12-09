@@ -28,7 +28,7 @@ func main() {
           conn.WriteTo([]byte("OK\n"),addr)
         } else {
           // send new string back to client
-          conn.WriteTo([]byte(newmessage + "\n"),addr)
+          conn.WriteTo([]byte(newmessage + " over UDP \n"),addr)
         }
      }
 
